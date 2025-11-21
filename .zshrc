@@ -97,6 +97,11 @@ fi
 # - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
 
+# Override aliases
+unalias gcm
+unalias ga
+unalias gp
+unalias gcb
 
 # Custom aliases 
 alias szrc="source ~/.zshrc"
@@ -114,6 +119,9 @@ function gcm {
 	git commit -m "$@"
 }
 
+function gcb { 
+	git checkout -b "$@"
+} 
 function gp {
 	git push "$@"
 }
@@ -139,6 +147,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#4eabb5,bold"
 echo "\e[1m"
 ~/.welcome.sh | lolcat -p 2 -S 43 -t -F .05
 echo "\e[1m"
+echo "--------------------------------------------------------------------------------------"
 echo "\e[1m"
 date | lolcat -p 2 -S 20 -t -F .05
 echo "\e[1m"
