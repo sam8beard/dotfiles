@@ -7,6 +7,13 @@ esac
 # removes duplicate paths
 export PATH=$(echo "$PATH" | awk -v RS=: -v ORS=: '!a[$0]++' | sed 's/:$//')
 
+# set up oh my bash
+OSH=$HOME/.oh-my-bash
+OSH_THEME="agnoster"
+
+OSH_PLUGINS=(git history web-search)
+[ -f "$OSH/oh-my-bash.sh" ] && source "$OSH/oh-my-bash.sh"
+
 # node version manager
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -39,6 +46,8 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more custom aliases and functions
+unset -f cd 
+unalias cd
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
@@ -103,10 +112,6 @@ function docker_volume_clean() {
 
 alias docker_clean_volumes="docker_swarm_clean && docker_clean && docker network prune -f && docker volume prune -f && docker_volume_clean"
 
-export OSH=$HOME/.oh-my-bash   # points to your symlink in ~/oh-my-bash
-export OSH_THEME="agnoster"
-OSH_PLUGINS=(git history web-search)
-[ -f "$OSH/oh-my-bash.sh" ] && source "$OSH/oh-my-bash.sh"
 # Display welcome banner 
 echo -e "\e[1m"
 ~/.welcome.sh | lolcat -p 2 -S 43 -t -F .05
