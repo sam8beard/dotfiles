@@ -11,6 +11,4 @@
 >
 >
 >
->he nods in approval.
->
->"\****heh***\*  .....as i suspected."
+>he nods in approval. "\****heh***\*  .....as i suspected."
