@@ -66,7 +66,7 @@ unalias 2
 alias szrc="source ~/.zshrc"
 alias nvl="nvim -c':e#<1'"
 alias grn="go run ."
-alias gah="git add ."
+alias gaa="git add --all"
 alias gs="git status"
 alias ..="cd .."
 alias 2="cd ../../"
@@ -99,18 +99,19 @@ zstyle :prompt:pure:path color white
 zstyle :prompt:pure:git:stash show yes
 zstyle :prompt:pure:git:branch color red
 zstyle ':prompt:pure:prompt:*' color cyan
-PURE_PROMPT_SYMBOL=">>"
+PURE_PROMPT_SYMBOL="   "
 prompt pure
 
 # Configure autosuggest
 bindkey '^ ' autosuggest-accept
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#4eabb5,bold"
 
+echo "\n         Welcome back,"
+~/.welcome.sh
+fastfetch
 # Display welcome banner 
 echo "\e[1m"
-~/.welcome.sh | lolcat -p 2 -S 43 -t -F .05
-echo "\e[1m"
-echo "--------------------------------------------------------------------------------------"
-echo "\e[1m"
-date | lolcat -p 2 -S 20 -t -F .05
+# ~/.welcome.sh | lolcat -p 2 -S 43 -t -F .05
+#
+# ~/.welcome.sh
 echo "\e[1m"
