@@ -9,7 +9,7 @@ export PATH=$(echo "$PATH" | awk -v RS=: -v ORS=: '!a[$0]++' | sed 's/:$//')
 
 # set up oh my bash
 OSH=$HOME/.oh-my-bash
-OSH_THEME="agnoster"
+OSH_THEME="bobby"
 
 OSH_PLUGINS=(git history web-search)
 [ -f "$OSH/oh-my-bash.sh" ] && source "$OSH/oh-my-bash.sh"
