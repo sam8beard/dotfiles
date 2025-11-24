@@ -115,3 +115,6 @@ echo "\e[1m"
 #
 # ~/.welcome.sh
 echo "\e[1m"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/mc mc
