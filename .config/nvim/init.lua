@@ -587,7 +587,7 @@ require('lazy').setup({
     priority = 1000, -- Make sure to load this before all the other start plugins.
     lazy = false,
     config = function()
-      vim.g.sonokai_style = 'espresso'
+      vim.g.sonokai_style = 'atlantis'
       vim.g.sonokai_enable_italic = true
       vim.cmd.colorscheme 'sonokai'
       vim.cmd [[
@@ -711,4 +711,10 @@ require('lazy').setup({
     },
   },
 })
+
+-- If no args are provided, open Neotree on startup
+if vim.fn.argc(-1) == 0 then
+  vim.cmd 'Neotree float'
+end
+
 -- vim: ts=2 sts=2 sw=2 et
