@@ -714,7 +714,8 @@ require('lazy').setup({
 
 -- If no args are provided, open Neotree on startup
 if vim.fn.argc(-1) == 0 then
-  vim.cmd 'Neotree float'
+  vim.cmd [[Neotree float reveal=true]]
+  vim.cmd [[wincmd w]]
 end
 
 -- vim: ts=2 sts=2 sw=2 et
