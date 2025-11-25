@@ -110,7 +110,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#4eabb5,bold"
 
 echo "\n         Welcome back,"
 ~/.welcome.sh
-fastfetch
+fastfetch --config ~/dots/.config/fastfetch/config-2.jsonc
 # Display welcome banner 
 echo "\e[1m"
 # ~/.welcome.sh | lolcat -p 2 -S 43 -t -F .05
