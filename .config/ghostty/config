@@ -1,8 +1,16 @@
-theme=Sonokai
+theme = Sonokai
+background = #12284a
+window-height = 9999
+window-width = 9999
+window-padding-x = 10
+window-padding-y = 10
 
-window-height=36
-window-width=160
-window-padding-x=24
-window-padding-y=24
+macos-window-shadow = false
+macos-titlebar-style = native
 
-font-size=16
+shell-integration-features = no-cursor
+cursor-style = block 
+
+background-opacity = 0.75
+
+font-size = 14
