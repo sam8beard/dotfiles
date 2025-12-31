@@ -57,25 +57,30 @@ fi
 # - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
 
-# Override aliases
+# OVERRIDE ALIASES
 unalias gcm
 unalias ga
 unalias gp
 unalias gcb
 unalias 2
 
-# Custom aliases 
+# CUSTOM ALIASES 
 alias szrc="source ~/.zshrc"
+# Open last file edited in nvim
 alias nvl="nvim -c':e#<1'"
 alias grn="go run ."
 alias gaa="git add --all"
 alias gs="git status"
+# Change into parent dir
 alias ..="cd .."
+# Change into grandparent dir
 alias 2="cd ../../"
+# Kill all background jobs
+# alias kbg='kill ${${(v)jobstates##*:*:}%=*}'
 
-# Custom functions
+# CUSTOM FUNCTIONS
 
-# change to top level directory after home (for *some* project root directories)
+# Change to top level directory after home (for *some* project root directories)
 function proot { 
 	cd ${HOME}/${${PWD#$HOME/}%%/*}
 } 

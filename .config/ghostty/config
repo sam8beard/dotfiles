@@ -1,4 +1,4 @@
-theme = Sonokai
+theme = Starlight
 background = #12284a
 window-height = 9999
 window-width = 9999
@@ -11,6 +11,11 @@ macos-titlebar-style = native
 shell-integration-features = no-cursor
 cursor-style = block 
 
-background-opacity = 0.75
+background-opacity = 0.80
+background-blur = 20
 
 font-size = 14
+maximize = true
+
+custom-shader = ~/.config/ghostty/shaders/in-game-crt-cursor.glsl
+

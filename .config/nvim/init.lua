@@ -608,13 +608,29 @@ require('lazy').setup({
       signature = { enabled = true },
     },
   },
+  --{
+  --  'DonJulve/NeoCyberVim',
+  --  priority = 1000,
+  --  lazy = false,
+  --  config = function()
+  --    require('NeoCyberVim').setup {
+  --      italics = {
+  --        functions = true,
+  --        keywords = true,
+  --        strings = true,
+  --        variables = true,
+  --        comments = true,
+  --      },
+  --    }
 
+  --    vim.cmd.colorscheme 'NeoCyberVim-dark'
+  --  end,
+  --},
   {
     'sainnhe/sonokai',
-    priority = 1000, -- Make sure to load this before all the other start plugins.
     lazy = false,
     config = function()
-      vim.g.sonokai_style = 'atlantis'
+      vim.g.sonokai_style = 'andromeda'
       vim.g.sonokai_enable_italic = true
       vim.cmd.colorscheme 'sonokai'
       vim.cmd [[
