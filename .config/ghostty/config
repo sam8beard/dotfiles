@@ -14,7 +14,7 @@ cursor-style = block
 background-opacity = 0.80
 background-blur = 20
 
-font-size = 14
+font-size = 15
 maximize = true
 
 custom-shader = ~/.config/ghostty/shaders/in-game-crt-cursor.glsl
